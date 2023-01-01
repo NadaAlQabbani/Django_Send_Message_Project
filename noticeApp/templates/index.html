@@ -89,13 +89,13 @@
           showCloseButton: true,
         });
       }
-     
-      
+      //else post the message into api 
+      //Private api
       else {
 
         $.ajax({
           type: "POST",
-          url: "Private api",
+          url: "http://95.177.174.137:5000/api/sendnotifications/investor/",
           data: JSON.stringify(jsonData),
           contentType: 'application/json; charset=utf-8',
           headers: { "X-CSRFToken": '{{csrf_token}}' },
